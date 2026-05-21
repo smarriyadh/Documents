@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>سمـاء الرياض للاستقدام | الأفق الأعلى للاستقدام الموثوق</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #F9FAFE;
+            color: #1E2A3E;
+            line-height: 1.6;
+        }
+
+        /* custom container */
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        /* header & nav */
+        .navbar {
+            background: linear-gradient(135deg, #0B2B4A 0%, #103A5E 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            color: #FFD966;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .logo p {
+            color: #E0F2FE;
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #F1F5F9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #FFD966;
+            transform: translateY(-2px);
+        }
+        /* hero section */
+        .hero {
+            background: radial-gradient(circle at 10% 30%, #EFF6FF, #FFFFFF);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .hero h2 {
+            font-size: 2.8rem;
+            color: #0B2B4A;
+            font-weight: 800;
+        }
+        .hero-stars {
+            font-size: 2rem;
+            color: #FFB347;
+            margin: 0.5rem 0;
+        }
+        .hero .badge {
+            background: #103A5E;
+            color: white;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        /* section styling */
+        .section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 70px;
+            height: 4px;
+            background: #FFB347;
+            border-radius: 4px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem;
+            box-shadow: 0 12px 25px -10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid #EFF3F8;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            color: #103A5E;
+            margin-bottom: 1rem;
+        }
+        .values-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .value-item {
+            background: #FFFFFF;
+            border-radius: 60px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            border: 1px solid #E2E8F0;
+        }
+        .star-core {
+            background: #FFD96620;
+            border: 1px solid #FFD966;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        th, td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid #E9EEF3;
+        }
+        th {
+            background: #F1F5F9;
+            font-weight: 700;
+            color: #0B2B4A;
+        }
+        .terms-box {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 2rem;
+            max-height: 550px;
+            overflow-y: auto;
+            border: 1px solid #E2E8F0;
+        }
+        .footer {
+            background: #0B2B4A;
+            color: #CBD5E1;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .btn-outline {
+            border: 2px solid #FFB347;
+            background: transparent;
+            padding: 0.5rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+        @media (max-width: 800px) {
+            .nav-flex { flex-direction: column; gap: 1rem; }
+            .nav-links { justify-content: center; }
+            .hero h2 { font-size: 1.9rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+        i.fa, i.far, i.fas { margin-left: 8px; }
+        .service-list li { margin-bottom: 0.7rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">
+                <h1><i class="fas fa-star-of-life"></i> سمـاء الرياض</h1>
+                <p>للاستقدام والتأجير | ترخيص فئة (ج) – أفراد</p>
+            </div>
+            <div class="nav-links">
+                <a href="#vision">الرؤية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#about">من نحن</a>
+                <a href="#expertise">الخبرات</a>
+                <a href="#specialties">التخصصات</a>
+                <a href="#terms">الشروط والسياسة</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+            <h2>الأفق الأعلى والأكثر موثوقية</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto;">نموذج ريادي يوازن بين تطلعات أصحاب العمل وحقوق الكفاءات العمالية</p>
+            <div class="badge"><i class="fas fa-gavel"></i> العدل في القلب • أمانة • خبرة • احترافية • شفافية</div>
+        </div>
+    </section>
+
+    <!-- الرؤية والرسالة -->
+    <div class="container" id="vision">
+        <div class="card-grid" style="margin-bottom: 2rem;">
+            <div class="card"><i class="fas fa-eye card-icon"></i><h3>الرؤية</h3><p>أن نكون الأفق الأعلى والأكثر موثوقية في قطاع الاستقدام بالمملكة، عبر تقديم نموذج ريادي يوازن بكفاءة وعدالة بين تطلعات أصحاب العمل وحقوق الكفاءات العمالية، بما يسهم في رفع جودة قطاع الخدمات والأعمال في الرياض وكافة أنحاء المملكة.</p></div>
+            <div class="card"><i class="fas fa-bullhorn card-icon"></i><h3>الرسالة</h3><p>نعمل في "سماء الرياض" كحلقة وصل متكاملة (تجسدها أقواس الشعار) لربط العملاء بأفضل الكفاءات البشرية. نلتزم بتقديم خدمات استقدام احترافية ترتكز على "العدل" كقيمة جوهرية، مع ضمان تطبيق أعلى معايير الجودة والشفافية لحفظ حقوق جميع الأطراف وتوفير تجربة استقدام آمنة ومستدامة.</p></div>
+        </div>
+    </div>
+
+    <!-- القيم الخمس + النجمة -->
+    <div class="container">
+        <h2 class="section-title">⭐ قيمنا المؤسسية (نجمة العدل)</h2>
+        <div class="values-wrap">
+            <div class="value-item star-core"><i class="fas fa-balance-scale"></i> العدل (الجوهر)</div>
+            <div class="value-item"><i class="fas fa-handshake"></i> الأمانة</div>
+            <div class="value-item"><i class="fas fa-chalkboard-user"></i> الخبرة</div>
+            <div class="value-item"><i class="fas fa-briefcase"></i> الاحترافية</div>
+            <div class="value-item"><i class="fas fa-eye"></i> الشفافية والتميز</div>
+        </div>
+        <div style="background: #EFF6FF; border-radius: 32px; padding: 1.5rem; margin-top: 0.5rem;">
+            <h4><i class="fas fa-chart-line"></i> الأهداف الاستراتيجية</h4>
+            <div class="card-grid" style="margin-top: 1rem;">
+                <div>🔹 بناء شراكات مستدامة: تعزيز العلاقة التكاملية (الأقواس) بين الشركة والعميل والعامل.</div>
+                <div>🔹 الارتقاء بمعايير الاختيار: تفعيل أدوات تقييم صارمة مبنية على الخبرة.</div>
+                <div>🔹 ترسيخ العدالة والامتثال: حماية حقوق العمالة وصون مصلحة أصحاب العمل وفق الأنظمة السعودية.</div>
+                <div>🔹 التميز التشغيلي: أتمتة خدمات الاستقدام وتطوير حلول رقمية مرنة تضمن الشفافية والسرعة.</div>
+                <div>🔹 التوسع وبناء السمعة: كسب ثقة المجتمع من خلال الالتزام بقيم الأمانة والاحترافية.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قائمة الخدمات التفصيلية -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-concierge-bell"></i> خدماتنا – قائمة تفصيلية</h2>
+            <div class="card-grid">
+                <div class="card"><i class="fas fa-users card-icon"></i><h3>التوسط في الاستقدام</h3><ul class="service-list"><li>عمالة مساندة (عامل منزلي، عاملة منزلية، طباخ، مربية أطفال)</li><li>عمالة مهنية (سائق خاص، حارس أمن، ممرض منزلي، مدرب رياضي)</li><li>عمالة متخصصة (مهندس ديكور، أخصائي تغذية، معالج طبيعي)</li><li>استقدام محلي (نقل خدمات عامل منزلي)</li></ul></div>
+                <div class="card"><i class="fas fa-calendar-alt card-icon"></i><h3>تأجير العمالة</h3><ul><li>تأجير عمالة منزلية قصير الأجل (أسبوعي / شهري)</li><li>تأجير عمالة مهنية حسب الطلب (ممرضين – حراس أمن)</li><li>حلول مرنة للمواسم والمناسبات</li></ul></div>
+                <div class="card"><i class="fas fa-laptop-code card-icon"></i><h3>الخدمات الإلكترونية</h3><ul><li>إصدار تأشيرة إلكترونية عبر مساند</li><li>توثيق العقود إلكترونياً ومتابعة الطلبات</li><li>تفويض تحويل الرواتب إلكترونياً لضمان الشفافية</li></ul></div>
+                <div class="card"><i class="fas fa-hand-holding-heart card-icon"></i><h3>خدمات ما بعد الاستقدام</h3><ul><li>استقبال وإيواء العمالة</li><li>فحص طبي شامل وتأهيل ثقافي</li><li>برامج توعية قانونية ولغوية</li><li>تأمين طبي واجتماعي طيلة العقد</li></ul></div>
+            </div>
+            <div style="margin-top: 2rem; background: white; border-radius: 28px; padding: 1.3rem;">
+                <h4><i class="fas fa-globe-asia"></i> الجنسيات المتاحة</h4>
+                <p>🇵🇭 الفلبين (مربيات - ممرضون) | 🇱🇰 سريلانكا | 🇮🇩 إندونيسيا | 🇰🇪 كينيا | 🇧🇩 بنجلاديش | 🇪🇹 إثيوبيا | 🇺🇬 أوغندا | 🇳🇵 نيبال</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- من نحن + تأسيس الشركة + الخبرات -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="card-grid">
+                <div class="card">
+                    <i class="fas fa-building card-icon"></i>
+                    <h3>تأسيس الشركة وترخيص الفئة (ج)</h3>
+                    <p>تأسست شركة سماء الرياض للاستقدام في العاصمة الرياض، وحاصلة على ترخيص وزارة الموارد البشرية والتنمية الاجتماعية فئة (ج) – أفراد (توسط وتأجير). يسمح لنا الترخيص بمزاولة نشاطي التوسط في استقدام العمالة وتقديم خدمات العمالة المنزلية، وفق أحدث لوائح قواعد ممارسة النشاط الملحق الرابع.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chalkboard-user card-icon"></i>
+                    <h3>خبراتنا وكفاءاتنا</h3>
+                    <p>فريق متعدد التخصصات: مستشارون قانونيون وعماليون، مسؤولي علاقات دولية، وخبراء تأهيل. نمتلك شراكات مع مكاتب إرسال في 12 دولة، ونعتمد معايير صارمة لاختيار العمالة. نقدم برامج تدريبية "التكيف الثقافي والاجتماعي" لضمان تجربة سلسة.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-handshake card-icon"></i>
+                    <h3>الريادة في العدالة</h3>
+                    <p>نؤمن بأن الاستدامة تبدأ من العدل، فنضمن حقوق العمالة وأصحاب العمل عبر عقود واضحة، رقابة على السكن والراتب، وخطوط ساخنة للشكاوى. عضو نشط في منظومة مساند المعتمدة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تخصصات ومهن -->
+    <section id="specialties">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> التخصصات والمهن حسب الجنسية</h2>
+            <table>
+                <thead><tr><th>المهنة / التخصص</th><th>أبرز الجنسيات</th><th>الوصف</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>مربية أطفال / مربية مربية</td><td>الفلبين، كينيا، إندونيسيا</td><td>حاصلات على دورات رعاية وتنمية مهارات</td></tr>
+                    <tr><td>سائق خاص</td><td>باكستان، الهند، الفلبين</td><td>رخصة قيادة سارية، خبرة في القيادة الدفاعية</td></tr>
+                    <tr><td>ممرض / ممرضة منزلية</td><td>الفلبين، الهند، أوغندا</td><td>مؤهل تمريض + ترخيص مزاولة</td></tr>
+                    <tr><td>طباخ / طباخة</td><td>سريلانكا، إثيوبيا، الفلبين</td><td>خبرة في المأكولات العربية والعالمية</td></tr>
+                    <tr><td>معالج طبيعي / أخصائي تغذية</td><td>مصر، الفلبين، كينيا</td><td>شهادات معتمدة وخبرة عملية</td></tr>
+                    <tr><td>عامل نظافة / عامل منزلي</td><td>بنجلاديش، إثيوبيا، سريلانكا</td><td>مدربون على معايير النظافة الاحترافية</td></tr>
+                </tbody>
+            </table>
+            <p class="badge" style="background:#eef2ff; color:#0B2B4A; margin-top:1.5rem; display:inline-block;"><i class="fas fa-check-circle"></i> نختار بعناية وفق أعلى معايير الكفاءة والأمانة</p>
+        </div>
+    </section>
+
+    <!-- الشروط والأحكام وسياسة الخدمة (مستند كامل) -->
+    <section class="section" id="terms">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-file-contract"></i> الشروط والأحكام وسياسة الخدمة</h2>
+            <div class="terms-box">
+                <h4>⚖️ تعريفات أساسية</h4>
+                <p><strong>الشركة:</strong> شركة سماء الرياض للاستقدام – مرخص لها فئة (ج).<br>
+                <strong>العميل/صاحب العمل:</strong> الشخص الطبيعي المتعاقد لاستقدام أو تأجير عامل.<br>
+                <strong>العامل:</strong> كل شخص يعمل لمصلحة صاحب العمل مقابل أجر.<br>
+                <strong>القواعد:</strong> قواعد ممارسة نشاط الاستقدام وتقديم الخدمات العمالية (الملحق الرابع).</p>
+
+                <h4>📌 شروط أهلية العميل</h4>
+                <ul>
+                    <li>سعودي الجنسية أو مقيم إقامة سارية لا تقل عن 3 أشهر.</li>
+                    <li>دخل شهري لا يقل عن 5,000 ريال (حسب المهنة قد يصل إلى 7,000 ريال).</li>
+                    <li>كشف بنكي يظهر رصيداً لا يقل عن 35,000 ريال.</li>
+                    <li>الحد الأعلى للعمالة المساندة: 4 عمال للمواطن / عامل واحد للمقيم.</li>
+                    <li>توفير سكن لائق وعدم وجود قيود قانونية تمنع الاستقدام.</li>
+                </ul>
+
+                <h4>📄 إجراءات التوسط والتعاقد الإلكتروني</h4>
+                <p>يتم التعاقد حصرياً عبر منصة <strong>مساند</strong> باستخدام عقد التوسط الإلكتروني الموحد. يُوقع العامل على عقد العمل بلغة يفهمها قبل القدوم، والفترة الزمنية للاستقدام لا تتجاوز 90 يوماً (ما لم يتفق الطرفان على غير ذلك).</p>
+
+                <h4>💰 التسعير والدفع والإلغاء</h4>
+                <ul>
+                    <li>رسوم التأشيرة الحكومية (تقريباً 2000 ريال) + رسوم الخدمة + ضريبة القيمة المضافة 15%.</li>
+                    <li>في حال تأخر الشركة عن المدة المتفق عليها، يحق للعميل استرداد كامل المبلغ أو الغرامة بواقع 40% من التكلفة.</li>
+                    <li>إذا رفض العامل العمل خلال فترة التجربة، تلتزم الشركة بالاستبدال أو استرداد الرسوم.</li>
+                    <li>حالات منع الاستقدام: الحجر أو الإفلاس أو أحكام قضائية سابقة.</li>
+                </ul>
+
+                <h4>🤝 التزامات العميل وصاحب العمل</h4>
+                <ul>
+                    <li>توفير المسكن اللائق والراتب الشهري المتفق عليه والراحة الأسبوعية.</li>
+                    <li>الالتزام بعقد العمل المنزلي الموحد وعدم تكليف العامل بأعمال لا تتناسب مع مهنته.</li>
+                    <li>الإبلاغ عن تغيب العامل أو هروبه للجهات المختصة.</li>
+                </ul>
+
+                <h4>🏢 التزامات الشركة تجاه العمالة</h4>
+                <ul>
+                    <li>ضمان حقوق العمالة وفق نظام العمل: رواتب، سكن، إجازات مدفوعة، تأمين طبي.</li>
+                    <li>التأكد من مطابقة العامل للمواصفات المهنية وإطلاعه على بنود العقد بلغته.</li>
+                    <li>توفير التأهيل والتوعية الثقافية والقانونية، والتوسط لحل النزاعات ودياً.</li>
+                </ul>
+
+                <h4>⚙️ آلية حل الشكاوى والنزاعات</h4>
+                <p>المرحلة الأولى: حل ودي خلال 7 أيام عبر قنوات الشركة. <br>
+                المرحلة الثانية: رفع شكوى عبر منصة مساند. <br>
+                المرحلة الثالثة: تصعيد للجنة العمالية. <br>
+                المرحلة الرابعة: التقاضي أمام محاكم الرياض.<br>
+                <strong>الضمان البنكي:</strong> للشركة ضمان بنكي ساري لضمان حقوق العملاء.</p>
+                <h4>📢 أحكام عامة</h4>
+                <p>اللغة العربية هي المعتمدة، وتخضع العلاقة لأنظمة المملكة. لا تسأل الشركة عن التأخير الناتج عن القوة القاهرة. تحتفظ الشركة بحق تحديث السياسة مع إخطار العملاء.</p>
+                <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color:#2e7d32;"></i> آخر تحديث: 2025 – نسخة معتمدة من إدارة سماء الرياض.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشفافية والتميز -->
+    <div class="container" style="margin: 2rem auto;">
+        <div style="background: linear-gradient(110deg, #103A5E 0%, #1E4A72 100%); border-radius: 36px; padding: 2rem; color: white; text-align: center;">
+            <i class="fas fa-hand-holding-usd" style="font-size: 2.5rem;"></i>
+            <h3 style="margin: 1rem 0;">التزامنا بالشفافية والعدل</h3>
+            <p>نضمن لعملائنا أسعاراً واضحة وبدون رسوم خفية، ونعمل على تمكين العمالة بحقوقها الكاملة لبناء علاقات عمل تدوم.</p>
+            <div style="margin-top: 1rem;"><span class="badge" style="background: #FFD966; color:#0B2B4A;"><i class="fas fa-star"></i> مساند معتمد | رخصة رقم (فئة ج) </span></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" style="margin-bottom: 1rem;"><h3 style="color:#FFD966;">سماء الرياض للاستقدام</h3></div>
+            <p><i class="fas fa-map-marker-alt"></i> الرياض – المملكة العربية السعودية | ترخيص وزارة الموارد البشرية والتنمية الاجتماعية رقم: (يمنح بعد التسجيل)</p>
+            <p><i class="fas fa-phone-alt"></i> 9200XXXXX | <i class="fas fa-envelope"></i> info@sama-riyadh.com</p>
+            <p class="mt-3">© 2025 جميع الحقوق محفوظة – شركة سماء الرياض للاستقدام (أفراد توسط وتأجير) <br> نموذج ريادي يجمع بين العدل والكفاءة</p>
+        </div>
+    </footer>
+</body>
+</html>
